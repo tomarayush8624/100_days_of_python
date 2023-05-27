@@ -17,7 +17,7 @@ class DataManager:
     def get_sheet_data(self):
         response = requests.get(url=SHEETY_API, headers=HEADER)
         self.sheet_data = (response.json()["prices"])
-        pprint(response.json())
+        pprint(self.sheet_data)
         return self.sheet_data
 
     def update_sheet_data(self):
